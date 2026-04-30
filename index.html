@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajith Alphonse | UX Designer</title>
+    <script>
+        // Apply persisted/system theme early to reduce first-paint mismatch.
+        (function () {
+            var key = 'portfolio-theme';
+            var saved = localStorage.getItem(key);
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            window.__initialTheme = theme;
+        })();
+    </script>
+    <link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<!-- EXPERIMENTAL SCROLL HERO: remove class "exp-scroll-hero" from <body> to disable (see styles.css + script.js blocks marked EXPERIMENTAL) -->
+<body class="exp-scroll-hero">
+    <!-- Mobile Warning Overlay -->
+    <div class="mobile-warning" id="mobileWarning">
+        <div class="mobile-warning-content">
+            <div class="mobile-icon">💻</div>
+            <h2>Desktop Experience Only</h2>
+            <p>This portfolio is optimized for desktop viewing. Please access it on a laptop or desktop computer for the best experience.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="desktop-content">
+        <!-- Navigation -->
+        <header class="header">
+            <nav class="nav">
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false">
+                    <span class="theme-toggle__track" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+                        <span class="theme-toggle__thumb"></span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+                    </span>
+                </button>
+                <div class="nav-left">
+                    <img src="assets/profile.jpg" alt="Ajith Alphonse" class="nav-avatar" onerror="this.style.background='#ddd'">
+                </div>
+                <div class="nav-links">
+                    <a href="#work" class="nav-link active">Work</a>
+                    <a href="know-me.html" class="nav-link">Know Me</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero: full-bleed (outside .main so not limited by portfolio max-width) -->
+        <section class="hero" aria-label="Portfolio hero section">
+            <!-- EXPERIMENTAL: .hero-pinned-stage + .hero-scroll-tail — when body.exp-scroll-hero is off, wrappers use display:contents (no layout change) -->
+            <div class="hero-pinned-stage">
+                <video
+                    id="homeBgVideo"
+                    class="hero-bg-video"
+                    src="./assets/image/background.webm"
+                    data-light-src="./assets/image/background.webm"
+                    data-dark-src="./assets/image/background dark.webm"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    aria-hidden="true">
+                </video>
+                <div class="hero-foreground-scroll">
+                    <div class="hero-identity">
+                        <h1 class="hero-identity-name">Ajith Alphonse</h1>
+                        <p class="hero-identity-line">💼 UX Graphic and visual designer at University of Utah</p>
+                        <p class="hero-identity-line hero-identity-line--muted">📍 Salt Lake City, Utah</p>
+                        <p class="hero-identity-chip-wrap">
+                            <span class="hero-identity-chip">6+ Years of Experience</span>
+                        </p>
+                    </div>
+                    <div class="hero-inner">
+                        <div class="hero-layout">
+                            <figure class="portrait-wrapper" aria-label="Interactive portrait reveal">
+                                <img
+                                    src="./assets/image/anime-one.png"
+                                    alt=""
+                                    class="portrait portrait-anime"
+                                    loading="eager"
+                                    decoding="async"
+                                    aria-hidden="true"
+                                >
+                                <img
+                                    src="./assets/image/real-one.png"
+                                    alt="Portrait of Ajith Alphonse"
+                                    class="portrait portrait-real"
+                                    fetchpriority="high"
+                                    loading="eager"
+                                    decoding="async"
+                                >
+                                <canvas class="portrait-canvas" aria-hidden="true"></canvas>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-tail" aria-hidden="true"></div>
+        </section>
+
+        <main class="main">
+            <!-- Projects Section -->
+            <section class="projects" id="work">
+                <div class="projects-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="b2c">B2C</button>
+                    <button class="filter-btn" data-filter="b2b">B2B SaaS</button>
+                </div>
+
+                <div class="project-hero-list">
+
+                    <!-- Flipkart — Onboarding & Login -->
+                    <article id="project-flipkart-onboarding" class="project-card project-hero" data-category="b2c">
+                        <div class="project-hero-inner">
+                            <div class="project-hero-text">
+                                <p class="project-hero-eyebrow">Flipkart</p>
+                                <h3 class="project-hero-title project-hero-title--flipkart">Resolving Drop-offs in Flipkart&rsquo;s Login Flow</h3>
+                                <p class="project-hero-desc">
+                                    Balancing speed, trust, and control in first-session onboarding — a data-led iteration on Truecaller timing within a high-traffic funnel.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Login</span>
+                                    <span class="tag">Data Driven</span>
+                                    <span class="tag">Onboarding</span>
+                                </div>
+                                <span class="project-hero-link project-hero-link--soon">Case study unavailable</span>
+                            </div>
+                            <div class="project-hero-media">
+                                <div class="project-hero-media-link project-hero-media-link--static">
+                                    <div class="project-hero-media-frame project-hero-media--flipkart">
+                                        <img src="assets/flipkart/01-hero-onboarding.png" alt="Flipkart onboarding and login case study preview" class="project-hero-poster">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Practo Search Experience -->
+                    <article id="project-practo-search" class="project-card project-hero" data-category="b2c">
+                        <div class="project-hero-inner">
+                            <div class="project-hero-text">
+                                <p class="project-hero-eyebrow">Practo</p>
+                                <h3 class="project-hero-title">Revitalizing the Search Experience</h3>
+                                <p class="project-hero-desc">
+                                    Reducing drop-off for first-time users in a competitive design bid focused on symptom-based search, trust, and conversion.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Competitive Design Bid</span>
+                                    <span class="tag">Healthcare</span>
+                                    <span class="tag">Search UX</span>
+                                </div>
+                                <span class="project-hero-link project-hero-link--soon">Case study unavailable</span>
+                            </div>
+                            <div class="project-hero-media">
+                                <div class="project-hero-media-link project-hero-media-link--static">
+                                    <div class="project-hero-media-frame project-hero-media--search">
+                                        <img src="assets/practo_portfolio_thumbnail.avif" alt="Practo Search redesign preview" class="project-hero-poster">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Oracle NetSuite -->
+                    <article id="project-netsuite" class="project-card project-hero" data-category="b2b">
+                        <div class="project-hero-inner">
+                            <div class="project-hero-text">
+                                <p class="project-hero-eyebrow">Oracle NetSuite</p>
+                                <h3 class="project-hero-title">AI-Assisted PDP Workflow Redesign</h3>
+                                <p class="project-hero-desc">
+                                    Self-initiated workflow optimization for the University of Utah Campus Store, reducing PDP publishing time from 30–40 minutes to under 10 minutes.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag tag-university"><img src="assets/u logo.png" alt="U" class="tag-logo"> University of Utah</span>
+                                    <span class="tag">Enterprise UX</span>
+                                    <span class="tag">Workflow Optimization</span>
+                                </div>
+                                <span class="project-hero-link project-hero-link--soon">Case study unavailable</span>
+                            </div>
+                            <div class="project-hero-media">
+                                <div class="project-hero-media-link project-hero-media-link--static">
+                                    <div class="project-hero-media-frame project-hero-media--netsuite">
+                                        <img src="assets/thumbnail_netsuite.avif" alt="Oracle NetSuite AI-Assisted PDP Workflow Redesign thumbnail" class="project-hero-poster">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Campus Store -->
+                    <article id="project-campus-store" class="project-card project-hero" data-category="b2b">
+                        <div class="project-hero-inner">
+                            <div class="project-hero-text">
+                                <p class="project-hero-eyebrow">Campus Store</p>
+                                <h3 class="project-hero-title">Retail & E‑Commerce Experience</h3>
+                                <p class="project-hero-desc">
+                                    Systems-level UX work for the University of Utah Campus Store, aligning product discovery with student shopping behavior.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag tag-university"><img src="assets/u logo.png" alt="U" class="tag-logo"> University of Utah</span>
+                                    <span class="tag">Retail UX</span>
+                                    <span class="tag tag-coming-soon">Coming soon</span>
+                                </div>
+                                <span class="project-hero-link project-hero-link--soon">Case study unavailable</span>
+                            </div>
+                            <div class="project-hero-media">
+                                <div class="project-hero-media-link project-hero-media-link--static">
+                                    <div class="project-hero-media-frame project-hero-media--campus">
+                                        <img src="assets/campus-store-thumbnail.jpg" alt="Campus Store homepage redesign preview" class="project-hero-poster">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- VYN -->
+                    <article id="project-vyn" class="project-card project-hero" data-category="b2b">
+                        <div class="project-hero-inner">
+                            <div class="project-hero-text">
+                                <p class="project-hero-eyebrow">VYN</p>
+                                <h3 class="project-hero-title">Rethinking Campus Delivery with Autonomous Robots</h3>
+                                <p class="project-hero-desc">
+                                    Designing a mobile-first experience for campus logistics, coordinating autonomous delivery robots across the University of Utah.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag tag-university"><img src="assets/u logo.png" alt="U" class="tag-logo"> University of Utah</span>
+                                    <span class="tag">B2B SaaS</span>
+                                    <span class="tag">Campus Logistics</span>
+                                    <span class="tag">AI-Assisted</span>
+                                    <span class="tag">Robotics</span>
+                                    <span class="tag tag-coming-soon">Coming soon</span>
+                                </div>
+                                <span class="project-hero-link project-hero-link--soon">Case study unavailable</span>
+                            </div>
+                            <div class="project-hero-media">
+                                <div class="project-hero-media-link project-hero-media-link--static">
+                                    <div class="project-hero-media-frame project-hero-media--vyn">
+                                        <img src="assets/vyn-tumbnail.avif" alt="VYN campus delivery preview" class="project-hero-poster">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Practo Care AI -->
+                    <article id="project-practo-care-ai" class="project-card project-hero" data-category="b2c">
+                        <div class="project-hero-inner">
+                            <div class="project-hero-text">
+                                <p class="project-hero-eyebrow">Practo Care AI</p>
+                                <h3 class="project-hero-title">Redesigning Telehealth in India</h3>
+                                <p class="project-hero-desc">
+                                    Smart intake, health history, and real-time multilingual translation to streamline remote consultations.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Healthcare UX</span>
+                                    <span class="tag">AI Design</span>
+                                    <span class="tag tag-coming-soon">Coming soon</span>
+                                </div>
+                                <span class="project-hero-link project-hero-link--soon">Case study unavailable</span>
+                            </div>
+                            <div class="project-hero-media">
+                                <div class="project-hero-media-link project-hero-media-link--static">
+                                    <div class="project-hero-media-frame project-hero-media--practo-ai">
+                                        <img src="assets/practo-tumbnail.jpg" alt="Practo Care AI preview" class="project-hero-poster">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Codebell — coming soon (not linked) -->
+                    <article id="project-codebell" class="project-card project-hero project-hero--coming-soon" data-category="b2b" aria-label="Codebell — case study coming soon">
+                        <div class="project-hero-inner">
+                            <div class="project-hero-text">
+                                <p class="project-hero-eyebrow">Codebell</p>
+                                <h3 class="project-hero-title">Digital Ordering System for Small Restaurants</h3>
+                                <p class="project-hero-desc">
+                                    Designing a zero-to-one mobile ordering experience and operational dashboard to reduce manual errors and clarify checkout.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Startup Product</span>
+                                    <span class="tag">Zero to One</span>
+                                    <span class="tag">iOS + Web</span>
+                                </div>
+                                <span class="project-hero-link project-hero-link--soon coming-soon-chip">Coming soon</span>
+                            </div>
+                            <div class="project-hero-media">
+                                <div class="project-hero-media-link project-hero-media-link--static">
+                                    <div class="project-hero-media-frame project-hero-media--codebell">
+                                        <img src="assets/codebell-thumbnail.png" alt="Codebell ordering system preview" class="project-hero-poster">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Let's connect</p>
+                <div class="footer-links">
+                    <a href="mailto:ajithalphonse300@gmail.com" class="footer-link">Email</a>
+                    <a href="https://www.linkedin.com/in/ajith-alphonse/" target="_blank" class="footer-link">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
