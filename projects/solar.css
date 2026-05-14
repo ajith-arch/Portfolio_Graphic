@@ -1,0 +1,165 @@
+/* Solar case study — dark cinematic strip (scoped to body.solar-case) */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.solar-case {
+    margin: 0;
+    min-height: 100vh;
+    background: #050505;
+    color: #9a9a9a;
+    font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.solar-case .solar-top {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    max-width: 2000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(5, 5, 5, 0.72);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+
+body.solar-case .solar-back {
+    justify-self: start;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #c8c8c8;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+body.solar-case .solar-back:hover {
+    color: #f5f5f5;
+}
+
+body.solar-case .solar-top .solar-title {
+    grid-column: 2;
+    justify-self: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #6b6b6b;
+}
+
+/* Full-bleed stage: pure black continues behind side gutters */
+body.solar-case .solar-stage {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background: #050505;
+}
+
+/*
+ * Work area: three vertical strips (1–7, 8–14, 15+) — same centered column width.
+ */
+body.solar-case main#solarGallery.solar-work {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+body.solar-case main#solarGallery.solar-work--loading {
+    min-height: 40vh;
+}
+
+body.solar-case main#solarGallery.solar-work--error {
+    padding: 48px 24px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: #888;
+}
+
+body.solar-case .sequential-media.sequential-media--error {
+    padding: 48px 24px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    color: #888;
+}
+
+body.solar-case .solar-column--strip {
+    box-sizing: border-box;
+    max-width: min(1400px, 86vw);
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+body.solar-case main#solarGallery .sequential-media {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 0;
+    font-size: 0;
+}
+
+@media (max-width: 1024px) {
+    body.solar-case .solar-column--strip {
+        max-width: min(1200px, 90vw);
+        width: 86%;
+    }
+}
+
+@media (max-width: 640px) {
+    body.solar-case .solar-column--strip {
+        max-width: none;
+        width: 92%;
+    }
+}
+
+body.solar-case .sequential-media__slot {
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 0;
+    background: #050505;
+}
+
+body.solar-case .sequential-media__media {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    object-fit: contain;
+    background: #050505;
+}
+
+body.solar-case .sequential-media__media--video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* If the browser cannot decode the file, native controls stay usable */
+body.solar-case .sequential-media__media--video[data-video-error] {
+    min-height: 220px;
+    background: #0a0a0a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
