@@ -1,0 +1,558 @@
+/* OnePlus Campus Store — premium light visual / graphic design case study */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.oneplus-case {
+    --op-text: #6e6e73;
+    --op-text-strong: #1d1d1f;
+    --op-text-muted: #86868b;
+    --op-utah: #cc0000;
+    --op-utah-soft: rgba(204, 0, 0, 0.12);
+    --op-nav-glass: rgba(255, 252, 252, 0.82);
+    --op-media-radius: clamp(20px, 2.2vw, 28px);
+    --op-intro-radius: clamp(24px, 2.8vw, 32px);
+    --op-media-shadow:
+        0 1px 3px rgba(80, 20, 20, 0.04),
+        0 14px 44px rgba(60, 10, 10, 0.07);
+    --op-media-surface: rgba(255, 255, 255, 0.88);
+    --op-media-edge: rgba(0, 0, 0, 0.06);
+
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(232, 17, 45, 0.06) 0%, transparent 55%),
+        linear-gradient(168deg, #ffffff 0%, #faf9f8 32%, #f3efee 58%, #f8f6f6 100%);
+    color: var(--op-text);
+    font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* —— Nav —— */
+body.oneplus-case .oneplus-top {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    max-width: 2000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--op-nav-glass);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    backdrop-filter: blur(18px) saturate(180%);
+    border-bottom: 1px solid rgba(204, 0, 0, 0.06);
+}
+
+body.oneplus-case .oneplus-back {
+    justify-self: start;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--op-text-strong);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+body.oneplus-case .oneplus-back:hover {
+    color: var(--op-utah);
+}
+
+body.oneplus-case .oneplus-top__label {
+    grid-column: 2;
+    justify-self: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--op-text-muted);
+}
+
+/* —— Layout —— */
+body.oneplus-case .oneplus-stage {
+    width: 100%;
+}
+
+body.oneplus-case .oneplus-column {
+    box-sizing: border-box;
+    max-width: min(1320px, 88vw);
+    width: 86%;
+    margin: 0 auto;
+    padding: clamp(28px, 4vh, 52px) 0 clamp(56px, 9vh, 112px);
+}
+
+/* —— Intro card (glass) —— */
+body.oneplus-case .oneplus-intro {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 clamp(48px, 6vw, 72px);
+    padding: clamp(32px, 4.5vw, 56px) clamp(28px, 4vw, 52px);
+    border-radius: var(--op-intro-radius);
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.03),
+        0 24px 64px rgba(120, 40, 40, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    backdrop-filter: blur(24px) saturate(160%);
+}
+
+body.oneplus-case .oneplus-intro__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, min(42%, 480px));
+    gap: clamp(28px, 4vw, 52px);
+    align-items: center;
+}
+
+body.oneplus-case .oneplus-intro__eyebrow {
+    margin: 0 0 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--op-utah);
+}
+
+body.oneplus-case .oneplus-intro__title {
+    margin: 0 0 16px;
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--op-text-strong);
+}
+
+body.oneplus-case .oneplus-intro__lead {
+    margin: 0 0 clamp(24px, 3vw, 32px);
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.65;
+    color: var(--op-text);
+    max-width: 52ch;
+}
+
+body.oneplus-case .oneplus-intro__meta {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(14px, 2vw, 20px);
+}
+
+body.oneplus-case .oneplus-intro__meta-row {
+    display: grid;
+    grid-template-columns: minmax(100px, 130px) 1fr;
+    gap: 12px 20px;
+    align-items: start;
+}
+
+body.oneplus-case .oneplus-intro__meta-row dt {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--op-text-muted);
+}
+
+body.oneplus-case .oneplus-intro__meta-row dd {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--op-text-strong);
+}
+
+body.oneplus-case .oneplus-intro__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+}
+
+body.oneplus-case .oneplus-intro__list li {
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--op-media-edge);
+    color: var(--op-text-strong);
+}
+
+body.oneplus-case .oneplus-intro__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.oneplus-case .oneplus-intro__visual-frame {
+    width: 100%;
+    border-radius: clamp(18px, 2vw, 24px);
+    overflow: hidden;
+    background: linear-gradient(145deg, #fafafa 0%, #f0ecec 100%);
+    border: 1px solid var(--op-media-edge);
+    box-shadow: var(--op-media-shadow);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+body.oneplus-case .oneplus-intro__visual-frame:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow:
+        0 4px 12px rgba(80, 20, 20, 0.06),
+        0 28px 56px rgba(60, 10, 10, 0.1);
+}
+
+body.oneplus-case .oneplus-intro__hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/* —— Campaign banner showcase — portrait 1080×1920 posters —— */
+body.oneplus-case .oneplus-campaign {
+    margin: 0 0 clamp(64px, 9vw, 112px);
+    padding: clamp(48px, 7vw, 88px) 0;
+}
+
+body.oneplus-case .oneplus-campaign__header {
+    max-width: 62ch;
+    margin: 0 auto clamp(40px, 5.5vw, 64px);
+    text-align: center;
+}
+
+body.oneplus-case .oneplus-campaign__eyebrow {
+    margin: 0 0 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--op-utah);
+}
+
+body.oneplus-case .oneplus-campaign__title {
+    margin: 0 0 16px;
+    font-size: clamp(1.5rem, 2.8vw, 2.125rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--op-text-strong);
+}
+
+body.oneplus-case .oneplus-campaign__desc {
+    margin: 0 auto;
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.65;
+    color: var(--op-text);
+}
+
+body.oneplus-case .oneplus-campaign__compare {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, min(500px, 38vw)));
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    gap: clamp(40px, 6vw, 88px);
+    row-gap: clamp(48px, 7vw, 72px);
+    width: 100%;
+    max-width: min(1240px, 100%);
+    margin: 0 auto;
+    padding: 0 clamp(12px, 2vw, 24px);
+    box-sizing: border-box;
+}
+
+body.oneplus-case .oneplus-campaign__panel {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(14px, 2vw, 18px);
+    width: 100%;
+    max-width: min(500px, 100%);
+}
+
+body.oneplus-case .oneplus-campaign__media {
+    position: relative;
+    width: 100%;
+    max-width: min(480px, 86vw);
+    aspect-ratio: 1080 / 1920;
+    border-radius: 32px;
+    overflow: hidden;
+    background:
+        linear-gradient(165deg, #fafafa 0%, #f0eeed 45%, #ebe8e7 100%);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.03),
+        0 12px 28px rgba(40, 12, 12, 0.06),
+        0 40px 80px rgba(50, 18, 18, 0.1);
+    transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.55s ease,
+        border-color 0.4s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    body.oneplus-case .oneplus-campaign__panel:hover .oneplus-campaign__media {
+        transform: translateY(-8px);
+        border-color: rgba(204, 0, 0, 0.14);
+        box-shadow:
+            0 6px 16px rgba(60, 15, 15, 0.08),
+            0 28px 56px rgba(50, 12, 12, 0.12),
+            0 56px 100px rgba(40, 10, 10, 0.12);
+    }
+}
+
+body.oneplus-case .oneplus-campaign__img,
+body.oneplus-case .oneplus-campaign__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    border: 0;
+}
+
+body.oneplus-case .oneplus-campaign__video {
+    pointer-events: none;
+    background: transparent;
+}
+
+body.oneplus-case .oneplus-campaign__label {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--op-text-muted);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    body.oneplus-case .oneplus-campaign__compare {
+        grid-template-columns: 1fr;
+        max-width: min(520px, 100%);
+        gap: clamp(44px, 8vw, 64px);
+    }
+
+    body.oneplus-case .oneplus-campaign__panel {
+        max-width: none;
+    }
+
+    body.oneplus-case .oneplus-campaign__media {
+        max-width: min(420px, 88vw);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.oneplus-case .oneplus-campaign__panel:hover .oneplus-campaign__media {
+        transform: none;
+    }
+}
+
+/* —— Scroll reveal —— */
+body.oneplus-case .oneplus-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.oneplus-case .oneplus-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.oneplus-case .oneplus-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* —— Showcase sections —— */
+body.oneplus-case .oneplus-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(56px, 8vw, 96px);
+}
+
+body.oneplus-case .oneplus-showcase--loading {
+    min-height: 24vh;
+    color: var(--op-text-muted);
+    font-size: 14px;
+}
+
+body.oneplus-case .oneplus-showcase--error {
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--op-text-muted);
+}
+
+body.oneplus-case .oneplus-section__head {
+    margin-bottom: clamp(24px, 3.5vw, 40px);
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(204, 0, 0, 0.1);
+}
+
+body.oneplus-case .oneplus-section__title {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--op-text-strong);
+}
+
+body.oneplus-case .oneplus-section__title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 14px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--op-utah), transparent);
+}
+
+body.oneplus-case .oneplus-section__gallery {
+    width: 100%;
+}
+
+body.oneplus-case .oneplus-section__empty {
+    padding: clamp(40px, 6vw, 64px) clamp(24px, 4vw, 40px);
+    text-align: center;
+    border-radius: var(--op-media-radius);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px dashed rgba(204, 0, 0, 0.15);
+}
+
+body.oneplus-case .oneplus-section__empty p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--op-text-muted);
+}
+
+/* —— Adaptive gallery (scoped) —— */
+body.oneplus-case .adaptive-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3vw, 36px);
+    width: 100%;
+}
+
+body.oneplus-case .adaptive-gallery__row {
+    width: 100%;
+}
+
+body.oneplus-case .adaptive-gallery__row--grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(12px, 2vw, 24px);
+    align-items: start;
+}
+
+body.oneplus-case .adaptive-gallery__row--full img,
+body.oneplus-case .adaptive-gallery__row--grid2 img,
+body.oneplus-case .adaptive-gallery__row--full video,
+body.oneplus-case .adaptive-gallery__row--grid2 video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+body.oneplus-case .adaptive-gallery__row--portrait {
+    display: flex;
+    justify-content: center;
+}
+
+body.oneplus-case .adaptive-gallery__row--portrait img,
+body.oneplus-case .adaptive-gallery__row--portrait video {
+    width: auto;
+    max-width: min(560px, 88%);
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+body.oneplus-case .adaptive-gallery__row--squareSingle {
+    display: flex;
+    justify-content: center;
+}
+
+body.oneplus-case .adaptive-gallery__row--squareSingle .adaptive-gallery__cell--single-square {
+    width: 100%;
+    max-width: min(720px, 56vw);
+}
+
+body.oneplus-case .adaptive-gallery__row--squareSingle img,
+body.oneplus-case .adaptive-gallery__row--squareSingle video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+body.oneplus-case figure.adaptive-gallery__cell {
+    margin: 0;
+    border-radius: var(--op-media-radius);
+    overflow: hidden;
+    background: var(--op-media-surface);
+    border: 1px solid var(--op-media-edge);
+    box-shadow: var(--op-media-shadow);
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.45s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    body.oneplus-case figure.adaptive-gallery__cell:hover {
+        transform: translateY(-5px);
+        box-shadow:
+            0 4px 12px rgba(80, 20, 20, 0.06),
+            0 22px 48px rgba(60, 10, 10, 0.1);
+    }
+}
+
+/* —— Responsive —— */
+@media (max-width: 900px) {
+    body.oneplus-case .oneplus-intro__layout {
+        grid-template-columns: 1fr;
+    }
+
+    body.oneplus-case .oneplus-intro__visual {
+        order: -1;
+    }
+}
+
+@media (max-width: 720px) {
+    body.oneplus-case .oneplus-column {
+        width: 92%;
+        max-width: none;
+    }
+
+    body.oneplus-case .oneplus-intro__meta-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    body.oneplus-case .adaptive-gallery__row--grid2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.oneplus-case .oneplus-intro__visual-frame:hover,
+    body.oneplus-case figure.adaptive-gallery__cell:hover {
+        transform: none;
+    }
+}

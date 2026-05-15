@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "base": "../assets/campus-store-oneplus/",
+  "sections": [
+    { "id": "product-branding", "title": "Product Branding", "items": [] },
+    { "id": "packaging-design", "title": "Packaging Design", "items": [] },
+    { "id": "campus-merchandising", "title": "Campus Store Merchandising", "items": [] },
+    { "id": "pdp-visual-design", "title": "PDP Visual Design", "items": [] },
+    { "id": "promotional-graphics", "title": "Promotional Graphics", "items": [] },
+    { "id": "wearables-storytelling", "title": "Wearables Storytelling", "items": [] }
+  ]
+}

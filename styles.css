@@ -1093,7 +1093,7 @@ html[data-theme="dark"] .project-card:hover {
     color: var(--color-text-primary);
 }
 
-.project-hero-title--flipkart {
+.project-hero-title--oneplus-campus {
     font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     letter-spacing: -0.015em;
@@ -1388,7 +1388,7 @@ html[data-theme="dark"] .tag.tag-coming-soon {
 .project-hero-list .project-hero-media--codebell,
 .project-hero-list .project-hero-media--vyn,
 .project-hero-list .project-hero-media--practo-ai,
-.project-hero-list .project-hero-media--flipkart,
+.project-hero-list .project-hero-media--oneplus-campus,
 .project-hero-list .project-hero-media--campus,
 .project-hero-list .project-hero-media--solar {
     background: var(--color-border-light);
@@ -1449,8 +1449,29 @@ html[data-theme="dark"] .tag.tag-coming-soon {
     }
 }
 
+/* OnePlus Campus — homepage card hover */
+.project-hero--oneplus .project-hero-media-frame {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+    will-change: transform;
+}
+
+.project-hero--oneplus:hover .project-hero-media-frame {
+    transform: scale(1.035);
+    box-shadow: 0 20px 48px rgba(204, 0, 0, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-hero--oneplus .project-hero-media-frame {
+        transition: none;
+    }
+
+    .project-hero--oneplus:hover .project-hero-media-frame {
+        transform: none;
+    }
+}
+
 .project-hero-list .project-hero-media--campus::before,
-.project-hero-list .project-hero-media--flipkart::before {
+.project-hero-list .project-hero-media--oneplus-campus::before {
     display: none;
 }
 
@@ -1566,17 +1587,13 @@ article.project-hero--coming-soon .project-hero-media-link--static {
     background: linear-gradient(135deg, #0D9488 0%, #14B8A6 40%, #2DD4BF 100%);
 }
 
-/* Flipkart — looping MP4 thumbnail (same treatment as Campus Store video) */
-.project-hero-media--flipkart {
-    background: transparent;
+/* Campus Store OnePlus — static PDP / branding thumbnail */
+.project-hero-media--oneplus-campus {
+    background: linear-gradient(145deg, #0d0d0f 0%, #161618 55%, #0a0a0c 100%);
 }
 
-.project-hero-media--flipkart::before {
+.project-hero-media--oneplus-campus::before {
     display: none;
-}
-
-#project-flipkart-onboarding .project-hero-video {
-    opacity: 1;
 }
 
 .project-hero-media--campus {

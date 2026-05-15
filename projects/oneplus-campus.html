@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnePlus Product Branding for Campus | Ajith Alphonse</title>
+  <link rel="icon" type="image/jpeg" href="../assets/profile.jpg">
+  <link rel="stylesheet" href="oneplus-campus.css">
+</head>
+<body class="oneplus-case">
+  <header class="oneplus-top">
+    <a class="oneplus-back" href="../index.html#work">← Work</a>
+    <span class="oneplus-top__label">OnePlus · Campus Store</span>
+  </header>
+
+  <div class="oneplus-stage">
+    <main class="oneplus-column" aria-label="OnePlus product branding case study">
+      <section class="oneplus-intro oneplus-reveal" aria-labelledby="oneplus-intro-title">
+        <div class="oneplus-intro__layout">
+          <div class="oneplus-intro__copy">
+            <p class="oneplus-intro__eyebrow">University of Utah Campus Store</p>
+            <h1 id="oneplus-intro-title" class="oneplus-intro__title">
+              OnePlus Product Branding for Campus
+            </h1>
+            <p class="oneplus-intro__lead">
+              End-to-end product branding, visual merchandising, and eCommerce storytelling for OnePlus wearables, earbuds, and accessories at the University of Utah Campus Store.
+            </p>
+
+            <dl class="oneplus-intro__meta">
+              <div class="oneplus-intro__meta-row">
+                <dt>Role</dt>
+                <dd>Senior Visual / Product Designer</dd>
+              </div>
+              <div class="oneplus-intro__meta-row">
+                <dt>Contribution</dt>
+                <dd>
+                  <ul class="oneplus-intro__list">
+                    <li>Product Branding</li>
+                    <li>Visual Design</li>
+                    <li>PDP Design</li>
+                    <li>eCommerce Merchandising</li>
+                    <li>Product Storytelling</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="oneplus-intro__meta-row">
+                <dt>Tools</dt>
+                <dd>Figma, Photoshop, Illustrator, Adobe Creative Suite</dd>
+              </div>
+              <div class="oneplus-intro__meta-row">
+                <dt>Project type</dt>
+                <dd>Retail Branding / Product Marketing / eCommerce</dd>
+              </div>
+            </dl>
+
+          </div>
+
+          <div class="oneplus-intro__visual" aria-hidden="true">
+            <div class="oneplus-intro__visual-frame">
+              <img
+                class="oneplus-intro__hero-img"
+                src="../assets/onepluscs.png"
+                width="1600"
+                height="900"
+                alt=""
+                decoding="async"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="oneplus-campaign oneplus-reveal"
+        aria-labelledby="oneplus-campaign-title"
+      >
+        <header class="oneplus-campaign__header">
+          <p class="oneplus-campaign__eyebrow">Campaign Visual System</p>
+          <h2 id="oneplus-campaign-title" class="oneplus-campaign__title">
+            OnePlus Product Branding Banners
+          </h2>
+          <p class="oneplus-campaign__desc">
+            A visual campaign system created for OnePlus wearables and earbuds at the University of Utah Campus Store, combining premium merchandising, product storytelling, and digital-first branding.
+          </p>
+        </header>
+
+        <div class="oneplus-campaign__compare">
+          <figure class="oneplus-campaign__panel oneplus-campaign__panel--static">
+            <div class="oneplus-campaign__media">
+              <img
+                src="../assets/oneplus/oneplus.png"
+                alt="OnePlus Campus Store campaign banner — static"
+                class="oneplus-campaign__img"
+                width="1080"
+                height="1920"
+                loading="lazy"
+                decoding="async"
+                draggable="false"
+              />
+            </div>
+            <figcaption class="oneplus-campaign__label">Static campaign</figcaption>
+          </figure>
+
+          <figure class="oneplus-campaign__panel oneplus-campaign__panel--motion">
+            <div class="oneplus-campaign__media">
+              <video
+                class="oneplus-campaign__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="../assets/oneplus/oneplus.png"
+                aria-label="OnePlus Campus Store campaign banner — motion"
+              >
+                <source src="../assets/oneplus/oneplus.webm" type="video/webm" />
+              </video>
+            </div>
+            <figcaption class="oneplus-campaign__label">Motion campaign</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div id="oneplusShowcase" class="oneplus-showcase" aria-label="OnePlus visual showcase"></div>
+    </main>
+  </div>
+
+  <script src="../js/adaptive-orientation-gallery.js"></script>
+  <script src="../js/oneplus-campus-reveal.js"></script>
+  <script src="../js/oneplus-campus-stack.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var params = new URLSearchParams(window.location.search);
+      var manifest =
+        params.get('manifest') ||
+        '../assets/campus-store-oneplus/manifest.json';
+
+      if (typeof initOneplusCampusReveal === 'function') {
+        initOneplusCampusReveal();
+      }
+      if (typeof initOneplusCampusGalleryStack === 'function') {
+        initOneplusCampusGalleryStack({ manifestUrl: manifest });
+      }
+
+      var campaignVideo = document.querySelector('.oneplus-campaign__video');
+      if (campaignVideo) {
+        var playCampaignVideo = function () {
+          var p = campaignVideo.play();
+          if (p && typeof p.catch === 'function') p.catch(function () {});
+        };
+        playCampaignVideo();
+        document.addEventListener('visibilitychange', function () {
+          if (!document.hidden) playCampaignVideo();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
