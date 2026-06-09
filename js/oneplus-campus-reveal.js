@@ -5,7 +5,7 @@
   'use strict';
 
   function initOneplusCampusReveal() {
-    var els = document.querySelectorAll('.oneplus-reveal');
+    var els = document.querySelectorAll('.oneplus-reveal, .campus-reveal');
     if (!els.length) return;
 
     if (!('IntersectionObserver' in window)) {

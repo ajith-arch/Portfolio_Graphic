@@ -1390,6 +1390,8 @@ html[data-theme="dark"] .tag.tag-coming-soon {
 .project-hero-list .project-hero-media--practo-ai,
 .project-hero-list .project-hero-media--oneplus-campus,
 .project-hero-list .project-hero-media--campus,
+.project-hero-list .project-hero-media--campus-redesign,
+.project-hero-list .project-hero-media--cmc-healthcare,
 .project-hero-list .project-hero-media--solar {
     background: var(--color-border-light);
 }
@@ -1468,6 +1470,278 @@ html[data-theme="dark"] .tag.tag-coming-soon {
     .project-hero--oneplus:hover .project-hero-media-frame {
         transform: none;
     }
+}
+
+/* Campus Store Redesign — homepage card hover */
+.project-hero--campus-redesign .project-hero-media-frame {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+    will-change: transform;
+}
+
+.project-hero--campus-redesign:hover .project-hero-media-frame {
+    transform: scale(1.035);
+    box-shadow: 0 20px 48px rgba(204, 0, 0, 0.14);
+}
+
+.project-hero--campus-redesign .project-hero-thumb {
+    transition: filter 0.45s ease;
+}
+
+.project-hero--campus-redesign:hover .project-hero-thumb {
+    filter: brightness(1.03);
+}
+
+/* CMC Healthcare — homepage card hover */
+.project-hero--cmc-healthcare .project-hero-media-frame {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+    will-change: transform;
+}
+
+.project-hero--cmc-healthcare:hover .project-hero-media-frame {
+    transform: scale(1.035);
+    box-shadow: 0 20px 48px rgba(37, 99, 235, 0.14);
+}
+
+.project-hero--cmc-healthcare .project-hero-poster {
+    object-fit: cover;
+    object-position: top center;
+    transition: filter 0.45s ease;
+}
+
+.project-hero--cmc-healthcare:hover .project-hero-poster {
+    filter: brightness(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-hero--campus-redesign .project-hero-media-frame,
+    .project-hero--cmc-healthcare .project-hero-media-frame {
+        transition: none;
+    }
+
+    .project-hero--campus-redesign:hover .project-hero-media-frame,
+    .project-hero--cmc-healthcare:hover .project-hero-media-frame {
+        transform: none;
+    }
+}
+
+/* CTA arrow nudge on card hover */
+.project-hero-link__arrow {
+    display: inline-block;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-hero-link__arrow {
+    transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card:hover .project-hero-link__arrow {
+        transform: none;
+    }
+}
+
+/* CSS placeholder thumbnails (Campus Store + CMC Healthcare) */
+.project-hero-thumb {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.project-hero-thumb__bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 10px 14px;
+    box-sizing: border-box;
+}
+
+.project-hero-thumb__bar--utah {
+    background: linear-gradient(90deg, #b30000 0%, #cc0000 55%, #a80000 100%);
+    color: #ffffff;
+}
+
+.project-hero-thumb__bar--medical {
+    background: linear-gradient(90deg, #eff6ff 0%, #f8fafc 100%);
+    color: #1e3a5f;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.project-hero-thumb__logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #cc0000;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.project-hero-thumb__cross {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.project-hero-thumb__cross::before,
+.project-hero-thumb__cross::after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    border-radius: 1px;
+}
+
+.project-hero-thumb__cross::before {
+    width: 8px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.project-hero-thumb__cross::after {
+    width: 2px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.project-hero-thumb__bar-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.project-hero-thumb__canvas {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 16px 16px;
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5f7 100%);
+    box-sizing: border-box;
+    min-height: 0;
+}
+
+.project-hero-thumb__canvas--medical {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 55%, #f1f5f9 100%);
+    gap: 14px;
+}
+
+.project-hero-thumb__hero-strip {
+    height: 28%;
+    min-height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(105deg, rgba(204, 0, 0, 0.12) 0%, rgba(204, 0, 0, 0.04) 45%, #ffffff 100%);
+    border: 1px solid rgba(204, 0, 0, 0.08);
+}
+
+.project-hero-thumb__product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    flex: 1 1 auto;
+    align-content: start;
+}
+
+.project-hero-thumb__product-card {
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-hero-thumb__product-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 58%;
+    background: linear-gradient(180deg, #f0f0f2 0%, #e8e8ed 100%);
+}
+
+.project-hero-thumb__product-card::after {
+    content: "";
+    position: absolute;
+    bottom: 12%;
+    left: 12%;
+    right: 28%;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.project-hero-thumb__product-card--accent::before {
+    background: linear-gradient(180deg, rgba(204, 0, 0, 0.15) 0%, rgba(204, 0, 0, 0.05) 100%);
+}
+
+.project-hero-thumb__appt-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.06);
+}
+
+.project-hero-thumb__appt-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #2563eb;
+}
+
+.project-hero-thumb__appt-slot {
+    display: block;
+    height: 8px;
+    border-radius: 4px;
+    background: #e2e8f0;
+    max-width: 72%;
+}
+
+.project-hero-thumb__appt-slot--active {
+    max-width: 48%;
+    background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+    opacity: 0.85;
+}
+
+.project-hero-thumb__service-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.project-hero-thumb__service-pill {
+    display: block;
+    height: 10px;
+    width: 28%;
+    border-radius: 999px;
+    background: #e2e8f0;
+}
+
+.project-hero-thumb__service-pill--wide {
+    width: 42%;
+    background: rgba(37, 99, 235, 0.12);
 }
 
 .project-hero-list .project-hero-media--campus::before,
@@ -1590,6 +1864,14 @@ article.project-hero--coming-soon .project-hero-media-link--static {
 /* Campus Store OnePlus — static PDP / branding thumbnail */
 .project-hero-media--oneplus-campus {
     background: linear-gradient(145deg, #0d0d0f 0%, #161618 55%, #0a0a0c 100%);
+}
+
+.project-hero-media--campus-redesign {
+    background: linear-gradient(160deg, #fafafa 0%, #f5f5f7 100%);
+}
+
+.project-hero-media--cmc-healthcare {
+    background: linear-gradient(160deg, #f8fafc 0%, #eff6ff 100%);
 }
 
 .project-hero-media--oneplus-campus::before {

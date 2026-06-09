@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Store Redesign | Ajith Alphonse</title>
+  <link rel="icon" type="image/jpeg" href="../assets/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="campus-store-redesign.css">
+</head>
+<body class="campus-case">
+  <!-- Floating Awwwards-style dock -->
+  <nav id="csDock" class="cs-dock" aria-label="Case study navigation">
+    <a href="../index.html#work" class="cs-dock__mark" aria-label="Back to portfolio">W.</a>
+    <span class="cs-dock__divider" aria-hidden="true"></span>
+    <a href="#info" class="cs-dock__tab" data-section="info">Info</a>
+    <a href="#elements" class="cs-dock__tab" data-section="elements">Elements</a>
+    <a href="#screens" class="cs-dock__tab" data-section="screens">Screens</a>
+    <a
+      href="https://ajith-arch.github.io/campusstore/"
+      class="cs-dock__tab cs-dock__tab--visit"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Visit Site</a>
+  </nav>
+
+  <main class="cs-main">
+    <!-- 1. Hero / Project Intro -->
+    <section id="hero" class="cs-hero cs-reveal" aria-labelledby="cs-hero-title">
+      <div class="cs-hero__inner">
+        <div class="cs-hero__copy">
+          <p class="cs-hero__label">University of Utah · Campus Store</p>
+          <h1 id="cs-hero-title" class="cs-hero__title">Campus Store Redesign</h1>
+          <p class="cs-hero__lead">
+            Ecommerce redesign focused on product discovery, storytelling, and a smoother shopping experience for students, alumni, and campus visitors.
+          </p>
+
+          <dl class="cs-hero__meta">
+            <div class="cs-hero__meta-row">
+              <dt>Role</dt>
+              <dd>UX / Product Designer</dd>
+            </div>
+            <div class="cs-hero__meta-row">
+              <dt>Contribution</dt>
+              <dd>
+                <ul class="cs-chips">
+                  <li>UX Design</li>
+                  <li>Ecommerce</li>
+                  <li>Product Discovery</li>
+                  <li>Visual Design</li>
+                  <li>Web Design</li>
+                </ul>
+              </dd>
+            </div>
+            <div class="cs-hero__meta-row">
+              <dt>Tools</dt>
+              <dd>Figma, Adobe Creative Suite, HTML, CSS, JavaScript</dd>
+            </div>
+            <div class="cs-hero__meta-row">
+              <dt>Project type</dt>
+              <dd>Retail Ecommerce / Web Redesign</dd>
+            </div>
+          </dl>
+
+          <a
+            class="cs-btn cs-btn--primary"
+            href="https://ajith-arch.github.io/campusstore/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Live Website <span class="cs-btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="cs-hero__visual">
+          <figure class="cs-media cs-media--hero">
+            <!-- Replace with updated hero mockup if needed -->
+            <img
+              src="../assets/campusredesign.png"
+              alt="Campus Store redesign — homepage hero preview"
+              class="cs-media__img"
+              width="1600"
+              height="900"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Project Overview (Info) -->
+    <section id="info" class="cs-section cs-section--info cs-reveal" aria-labelledby="cs-info-title">
+      <header class="cs-section__head">
+        <p class="cs-section__eyebrow">Info</p>
+        <h2 id="cs-info-title" class="cs-section__title">Project overview</h2>
+      </header>
+
+      <div class="cs-overview">
+        <article class="cs-overview__card">
+          <h3 class="cs-overview__label">Challenge</h3>
+          <p class="cs-overview__text">
+            The existing campus retail experience needed a more modern ecommerce flow that could support students, alumni, and visitors with clearer product discovery and stronger campus branding.
+          </p>
+        </article>
+        <article class="cs-overview__card">
+          <h3 class="cs-overview__label">Approach</h3>
+          <p class="cs-overview__text">
+            I redesigned the experience around category storytelling, large lifestyle visuals, clear shopping paths, and focused product sections for Women, Men, Kids, Clearance, and store information.
+          </p>
+        </article>
+        <article class="cs-overview__card">
+          <h3 class="cs-overview__label">Outcome</h3>
+          <p class="cs-overview__text">
+            A polished responsive web experience with improved hierarchy, stronger merchandising zones, clearer navigation, and a scalable visual system for future campus campaigns.
+          </p>
+        </article>
+      </div>
+
+      <!-- 3. Design Direction -->
+      <div class="cs-direction cs-reveal">
+        <header class="cs-direction__head">
+          <p class="cs-section__eyebrow">Design direction</p>
+          <h3 class="cs-direction__title">Visual system</h3>
+        </header>
+        <ul class="cs-direction__list">
+          <li>Bold athletic typography</li>
+          <li>Full-bleed video / image hero sections</li>
+          <li>Color-coded category navigation</li>
+          <li>Large editorial product sections</li>
+          <li>Clean retail product cards</li>
+          <li>High-contrast CTA buttons</li>
+          <li>Campus identity through red, teal, navy, orange &amp; yellow accents</li>
+        </ul>
+        <div class="cs-direction__swatches" aria-hidden="true">
+          <span class="cs-swatch cs-swatch--red"></span>
+          <span class="cs-swatch cs-swatch--teal"></span>
+          <span class="cs-swatch cs-swatch--navy"></span>
+          <span class="cs-swatch cs-swatch--orange"></span>
+          <span class="cs-swatch cs-swatch--yellow"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. UI Elements -->
+    <section id="elements" class="cs-section cs-section--elements cs-reveal" aria-labelledby="cs-elements-title">
+      <header class="cs-section__head">
+        <p class="cs-section__eyebrow">Elements</p>
+        <h2 id="cs-elements-title" class="cs-section__title">Reusable UI components</h2>
+        <p class="cs-section__desc">Core interface pieces that define the Campus Store ecommerce experience.</p>
+      </header>
+
+      <div class="cs-ui-library">
+        <!-- Sourced from uofu-cursor: .nav__menu -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">01</span>
+            <h3 class="cs-ui-group__title">Menu button</h3>
+            <p class="cs-ui-group__desc">Teal overlap button — extends from the left gutter into the hero frame.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--gutter">
+            <div class="cs-ui-stage__gutter" aria-hidden="true"></div>
+            <div class="cs-ui-stage__panel cs-ui-stage__panel--hero">
+              <button class="cs-ui-menu" type="button" tabindex="-1" aria-hidden="true">
+                <span class="cs-ui-menu__text">MENU</span>
+                <span class="cs-ui-menu__icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .nav__blocks -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">02</span>
+            <h3 class="cs-ui-group__title">Category navigation</h3>
+            <p class="cs-ui-group__desc">Color-coded product category tabs — Women, Men, Kids, Clearance.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--nav">
+            <div class="cs-ui-nav-blocks">
+              <div class="cs-ui-nav-block cs-ui-nav-block--label">
+                <span>PRODUCT<br/>CATEGORIES</span>
+              </div>
+              <span class="cs-ui-nav-block cs-ui-nav-block--women">WOMEN</span>
+              <span class="cs-ui-nav-block cs-ui-nav-block--men">MEN</span>
+              <span class="cs-ui-nav-block cs-ui-nav-block--kids">KIDS</span>
+              <span class="cs-ui-nav-block cs-ui-nav-block--clearance">CLEARANCE</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .scroll-card -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">03</span>
+            <h3 class="cs-ui-group__title">Scroll prompt — hero</h3>
+            <p class="cs-ui-group__desc">Teal scroll card with mouse icon and stacked PLEASE SCROLL label.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--scroll">
+            <div class="cs-ui-scroll cs-ui-scroll--teal">
+              <span class="cs-ui-scroll__mouse">
+                <svg viewBox="0 0 24 36" width="22" height="34" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="32" rx="10"/>
+                  <circle cx="12" cy="10" r="2" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <span class="cs-ui-scroll__text">PLEASE<br/>SCROLL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .women__scroll-card -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">04</span>
+            <h3 class="cs-ui-group__title">Scroll prompt — section</h3>
+            <p class="cs-ui-group__desc">Section-level variant — background color matches section theme (orange for Women).</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--scroll cs-ui-stage--scroll-orange">
+            <div class="cs-ui-scroll cs-ui-scroll--orange">
+              <span class="cs-ui-scroll__mouse">
+                <svg viewBox="0 0 24 36" width="22" height="34" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="32" rx="10"/>
+                  <circle cx="12" cy="10" r="2" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <span class="cs-ui-scroll__text">PLEASE<br/>SCROLL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .women__cta -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">05</span>
+            <h3 class="cs-ui-group__title">Primary &amp; secondary CTAs</h3>
+            <p class="cs-ui-group__desc">High-contrast action pair — filled primary and inverted secondary.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--cta">
+            <div class="cs-ui-cta-bar">
+              <span class="cs-ui-cta cs-ui-cta--primary">SHOP WOMEN&rsquo;S RANGE</span>
+              <span class="cs-ui-cta cs-ui-cta--secondary">CLEARANCE</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .women__cat -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">06</span>
+            <h3 class="cs-ui-group__title">Category filter buttons</h3>
+            <p class="cs-ui-group__desc">Outlined filters that fill with section color on hover.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--filters">
+            <div class="cs-ui-cats">
+              <span class="cs-ui-cat">NEW ARRIVALS</span>
+              <span class="cs-ui-cat">HOODIES</span>
+              <span class="cs-ui-cat">TOPS &amp; TEES</span>
+              <span class="cs-ui-cat">OUTERWEAR</span>
+              <span class="cs-ui-cat">ACCESSORIES</span>
+              <span class="cs-ui-cat">FOOTWEAR</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .women__gutter-link -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">07</span>
+            <h3 class="cs-ui-group__title">Section gutter navigation</h3>
+            <p class="cs-ui-group__desc">Vertical side-rail links for BACK TO TOP and NEXT SECTION.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--gutter-nav">
+            <aside class="cs-ui-gutter">
+              <span class="cs-ui-gutter__link">BACK TO TOP</span>
+              <span class="cs-ui-gutter__link">NEXT SECTION</span>
+            </aside>
+            <div class="cs-ui-stage__panel cs-ui-stage__panel--muted" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .clearance-card -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">08</span>
+            <h3 class="cs-ui-group__title">Clearance product card</h3>
+            <p class="cs-ui-group__desc">Retail card with image frame, product name, and brand label.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--card">
+            <!-- REPLACE image src with clearance product asset -->
+            <article class="cs-ui-product">
+              <div class="cs-ui-product__image">
+                <div class="cs-ui-product__placeholder" aria-hidden="true"></div>
+              </div>
+              <h4 class="cs-ui-product__name">UTAH WOMEN&rsquo;S HOODIE</h4>
+              <p class="cs-ui-product__brand">CAMPUS STORE APPAREL</p>
+            </article>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .clearance-footer__btn, carousel arrows -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">09</span>
+            <h3 class="cs-ui-group__title">Carousel &amp; footer actions</h3>
+            <p class="cs-ui-group__desc">Teal carousel arrows and clearance footer CTA.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--actions">
+            <div class="cs-ui-carousel-demo">
+              <button class="cs-ui-carousel-arrow cs-ui-carousel-arrow--prev" type="button" tabindex="-1" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M15 6l-6 6 6 6"/></svg>
+              </button>
+              <button class="cs-ui-carousel-arrow cs-ui-carousel-arrow--next" type="button" tabindex="-1" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+            <span class="cs-ui-footer-btn">VIEW ALL CLEARANCE</span>
+          </div>
+        </article>
+
+        <!-- Sourced from uofu-cursor: .utility bar -->
+        <article class="cs-ui-group cs-reveal">
+          <header class="cs-ui-group__head">
+            <span class="cs-ui-group__index">10</span>
+            <h3 class="cs-ui-group__title">Utility bar</h3>
+            <p class="cs-ui-group__desc">Top bar — contact, search, account, and cart with badge.</p>
+          </header>
+          <div class="cs-ui-stage cs-ui-stage--utility">
+            <div class="cs-ui-utility">
+              <div class="cs-ui-utility__left">
+                <span class="cs-ui-utility__bell" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-5v-1l-1.6-1.6V9.5A5.4 5.4 0 0 0 13 4.18V3a1 1 0 1 0-2 0v1.18A5.4 5.4 0 0 0 6.6 9.5v3.9L5 15v1Z"/></svg>
+                </span>
+                <span class="cs-ui-utility__contact">
+                  <span>08 9721 5229</span>
+                  <span>STORE@CAMPUS.COM.AU</span>
+                </span>
+              </div>
+              <div class="cs-ui-utility__center">
+                <span class="cs-ui-utility__search-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                </span>
+                <span class="cs-ui-utility__search">Product Search</span>
+              </div>
+              <div class="cs-ui-utility__right">
+                <span class="cs-ui-utility__account">
+                  <span class="cs-ui-utility__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+                  </span>
+                  <span class="cs-ui-utility__account-text">Register<br/>Login</span>
+                </span>
+                <span class="cs-ui-utility__cart">
+                  <span class="cs-ui-utility__cart-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2.5l2.2 12.2A2 2 0 0 0 8.7 17H18a2 2 0 0 0 2-1.6L21.5 7H6"/></svg>
+                    <span class="cs-ui-utility__badge">0</span>
+                  </span>
+                  <span class="cs-ui-utility__cart-text">Shopping Cart</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4 & 5. Key Screens + Walkthrough (Screens) -->
+    <section id="screens" class="cs-section cs-section--screens cs-reveal" aria-labelledby="cs-screens-title">
+      <header class="cs-section__head">
+        <p class="cs-section__eyebrow">Screens</p>
+        <h2 id="cs-screens-title" class="cs-section__title">Key screens</h2>
+        <p class="cs-section__desc">Selected views from the Campus Store redesign — replace placeholders with final screenshots.</p>
+      </header>
+
+      <div class="cs-gallery">
+        <!-- REPLACE: assets/campus-store/screens/homepage-hero.png -->
+        <figure class="cs-screen cs-screen--wide cs-reveal">
+          <div class="cs-screen__frame">
+            <img
+              src="../assets/campusredesign.png"
+              alt="Homepage hero"
+              class="cs-screen__img"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <figcaption class="cs-screen__caption">Homepage Hero</figcaption>
+        </figure>
+
+        <figure class="cs-screen cs-reveal">
+          <div class="cs-screen__frame">
+            <img
+              src="../assets/womenspage.png"
+              alt="Women's collection — Campus Store redesign"
+              class="cs-screen__img"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <figcaption class="cs-screen__caption">Women's Collection</figcaption>
+        </figure>
+
+        <figure class="cs-screen cs-reveal">
+          <div class="cs-screen__frame">
+            <img
+              src="../assets/menspage.jpeg"
+              alt="Men's collection — Campus Store redesign"
+              class="cs-screen__img"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <figcaption class="cs-screen__caption">Men's Collection</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 7. Final Impact -->
+    <section id="impact" class="cs-section cs-section--impact cs-reveal" aria-labelledby="cs-impact-title">
+      <div class="cs-impact">
+        <h2 id="cs-impact-title" class="cs-impact__title">
+          Designed to feel like a modern campus retail experience.
+        </h2>
+        <p class="cs-impact__text">
+          The redesign brings together apparel discovery, campus branding, ecommerce clarity, and responsive storytelling — giving the University of Utah Campus Store a confident, student-ready digital presence.
+        </p>
+        <div class="cs-impact__actions">
+          <a
+            class="cs-btn cs-btn--primary"
+            href="https://ajith-arch.github.io/campusstore/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Live Site <span class="cs-btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="cs-btn cs-btn--ghost" href="../index.html#work">
+            Back to Work <span class="cs-btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/campus-store-case.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof initCampusStoreCase === 'function') initCampusStoreCase();
+    });
+  </script>
+</body>
+</html>
