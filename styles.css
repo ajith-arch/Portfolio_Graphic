@@ -1392,6 +1392,7 @@ html[data-theme="dark"] .tag.tag-coming-soon {
 .project-hero-list .project-hero-media--campus,
 .project-hero-list .project-hero-media--campus-redesign,
 .project-hero-list .project-hero-media--cmc-healthcare,
+.project-hero-list .project-hero-media--baltic,
 .project-hero-list .project-hero-media--solar {
     background: var(--color-border-light);
 }
@@ -1512,14 +1513,37 @@ html[data-theme="dark"] .tag.tag-coming-soon {
     filter: brightness(1.02);
 }
 
+/* Baltic — homepage card hover */
+.project-hero--baltic .project-hero-media-frame {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+    will-change: transform;
+}
+
+.project-hero--baltic:hover .project-hero-media-frame {
+    transform: scale(1.035);
+    box-shadow: 0 20px 48px rgba(26, 24, 22, 0.18);
+}
+
+.project-hero--baltic .project-hero-poster {
+    object-fit: cover;
+    object-position: center;
+    transition: filter 0.45s ease;
+}
+
+.project-hero--baltic:hover .project-hero-poster {
+    filter: brightness(1.03);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .project-hero--campus-redesign .project-hero-media-frame,
-    .project-hero--cmc-healthcare .project-hero-media-frame {
+    .project-hero--cmc-healthcare .project-hero-media-frame,
+    .project-hero--baltic .project-hero-media-frame {
         transition: none;
     }
 
     .project-hero--campus-redesign:hover .project-hero-media-frame,
-    .project-hero--cmc-healthcare:hover .project-hero-media-frame {
+    .project-hero--cmc-healthcare:hover .project-hero-media-frame,
+    .project-hero--baltic:hover .project-hero-media-frame {
         transform: none;
     }
 }
@@ -1872,6 +1896,10 @@ article.project-hero--coming-soon .project-hero-media-link--static {
 
 .project-hero-media--cmc-healthcare {
     background: linear-gradient(160deg, #f8fafc 0%, #eff6ff 100%);
+}
+
+.project-hero-media--baltic {
+    background: linear-gradient(160deg, #2a2826 0%, #1c1b19 100%);
 }
 
 .project-hero-media--oneplus-campus::before {
